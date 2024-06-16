@@ -1,8 +1,28 @@
 
+import { FC } from "react"
+import { createBrowserRouter,RouterProvider } from "react-router-dom"
+import AppLayout from "./Layout/AppLayout"
 
-const App = () => {
+
+const App:FC = () => {
+
+  const appRoutes = createBrowserRouter([
+    {
+      path:"/",
+      element:<AppLayout/>,
+      children:[
+
+      ]
+    }
+
+  ])
+   
   return (
-    <div>clean app</div>
+
+<RouterProvider router={appRoutes}/>
+
+ 
+
   )
 }
 
